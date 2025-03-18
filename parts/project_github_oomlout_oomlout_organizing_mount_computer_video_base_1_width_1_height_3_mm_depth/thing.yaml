@@ -1,0 +1,322 @@
+classification: project
+color: oomlout_organizing_mount_computer_video
+description_extra: ''
+description_main: base_1_width_1_height_3_mm_depth
+full_rotations:
+- 0
+- 0
+- 0
+full_shift:
+- 0
+- 0
+- 0
+id: project_github_oomlout_oomlout_organizing_mount_computer_video_base_1_width_1_height_3_mm_depth
+id_oobb: oobb_part_oomlout_organizing_mount_computer_video_base_1_width_1_height_3_mm_depth
+kwargs:
+  filter: ''
+  height: 1
+  modes:
+  - 3dpr
+  navigation: true
+  oomp_classification: project
+  oomp_color: oomlout_organizing_mount_computer_video
+  oomp_description_extra: ''
+  oomp_description_main: base_1_width_1_height_3_mm_depth
+  oomp_manufacturer: ''
+  oomp_mode: project
+  oomp_part_number: ''
+  oomp_run: true
+  oomp_size: oomlout
+  oomp_type: github
+  overwrite: true
+  thickness: 3
+  typ: all
+  type: oomlout_organizing_mount_computer_video_base
+  width: 1
+manufacturer: ''
+name: base
+part_number: ''
+project_name: C:\gh\oomlout_organizing_mount_computer_video_conferencing_screen_1240_mm_width_830_mm_height_105_mm_dept
+size: oomlout
+thing:
+  classification: oobb
+  color: ''
+  components:
+  - - depth: 10
+      h: 10
+      height: 1
+      inclusion: laser
+      pos: &id001
+      - 0
+      - 0
+      - 0.0
+      r: 31.0
+      radius: 31.0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 10
+      h: 10
+      height: 1
+      inclusion: 3dpr
+      pos: *id001
+      r: 31.0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 10
+      h: 10
+      height: 1
+      inclusion: 'true'
+      pos: *id001
+      r: 31.0
+      radius: 31.0
+      shape: cylinder
+      type: positive
+      width: 1
+  - - depth: 85
+      h: 85
+      height: 1
+      inclusion: laser
+      pos: &id002
+      - 0
+      - 0
+      - 10.0
+      r1: 31.0
+      r2: 26.5
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 85
+      h: 85
+      height: 1
+      inclusion: 3dpr
+      pos: *id002
+      r1: 31.0
+      r2: 26.5
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 85
+      h: 85
+      height: 1
+      inclusion: 'true'
+      pos: *id002
+      r1: 31.0
+      r2: 26.5
+      shape: cylinder
+      type: positive
+      width: 1
+  - - depth: 15
+      h: 15
+      height: 1
+      inclusion: laser
+      pos: &id003
+      - 0
+      - 0
+      - 95.0
+      r1: 26.5
+      r2: 20.0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 15
+      h: 15
+      height: 1
+      inclusion: 3dpr
+      pos: *id003
+      r1: 26.5
+      r2: 20.0
+      shape: cylinder
+      type: positive
+      width: 1
+    - depth: 15
+      h: 15
+      height: 1
+      inclusion: 'true'
+      pos: *id003
+      r1: 26.5
+      r2: 20.0
+      shape: cylinder
+      type: positive
+      width: 1
+  - - height: 1
+      m: '#'
+      pos:
+      - 8
+      - -250.0
+      - 0
+      shape: cube
+      size:
+      - 500
+      - 500
+      - 500
+      type: negative
+      width: 1
+    - height: 1
+      m: '#'
+      pos:
+      - 8
+      - -250.0
+      - 0
+      shape: cube
+      size:
+      - 500
+      - 500
+      - 500
+      type: negative
+      width: 1
+    - height: 1
+      m: '#'
+      pos:
+      - 8
+      - -250.0
+      - 0
+      shape: cube
+      size:
+      - 500
+      - 500
+      - 500
+      type: negative
+      width: 1
+  components_objects:
+  - depth: 10
+    filter: ''
+    height: 1
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: project
+    oomp_color: oomlout_organizing_mount_computer_video
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 5.0
+    radius: 31.0
+    save_type: all
+    shape: oobb_cylinder
+    thickness: 3
+    typ: all
+    type: positive
+    width: 1
+  - depth: 85
+    filter: ''
+    height: 1
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: project
+    oomp_color: oomlout_organizing_mount_computer_video
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 52.5
+    r1: 31.0
+    r2: 26.5
+    save_type: all
+    shape: oobb_cylinder
+    thickness: 3
+    typ: all
+    type: positive
+    width: 1
+  - depth: 15
+    filter: ''
+    height: 1
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: project
+    oomp_color: oomlout_organizing_mount_computer_video
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 102.5
+    r1: 26.5
+    r2: 20.0
+    save_type: all
+    shape: oobb_cylinder
+    thickness: 3
+    typ: all
+    type: positive
+    width: 1
+  - filter: ''
+    height: 1
+    m: '#'
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: project
+    oomp_color: oomlout_organizing_mount_computer_video
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: project
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: oomlout
+    oomp_type: github
+    overwrite: true
+    pos:
+    - 8
+    - -250.0
+    - 0
+    save_type: all
+    shape: oobb_slice
+    thickness: 3
+    typ: all
+    type: n
+    width: 1
+  components_string:
+  - oobb_cylinder_shape_positive_type_10_depth_0_0_5.0_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_organizing_mount_computer_video_oomp_color_31.0_radius
+  - oobb_cylinder_shape_positive_type_85_depth_0_0_52.5_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_organizing_mount_computer_video_oomp_color_31.0_r1_26.5_r2
+  - oobb_cylinder_shape_positive_type_15_depth_0_0_102.5_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_organizing_mount_computer_video_oomp_color_26.5_r1_20.0_r2
+  - oobb_slice_shape_n_type_8_-250.0_0_pos_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_project_oomp_mode_true_oomp_run_1_width_1_height_3_thickness_project_oomp_classification_github_oomp_type_oomlout_oomp_size_oomlout_organizing_mount_computer_video_oomp_color
+  description: oomlout organizing mount computer video base 1x1x3
+  description_extra: ''
+  description_main: 1_width_1_height_3_mm_depth
+  folder: C:\gh\oomlout_oobb_version_4_generated_parts\parts\oobb_part_oomlout_organizing_mount_computer_video_base_1_width_1_height_3_mm_depth
+  height: 1
+  height_mm: 14
+  id: oobb_part_oomlout_organizing_mount_computer_video_base_1_width_1_height_3_mm_depth
+  link_main: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/navigation_oomp/oobb/part/oomlout_organizing_mount_computer_video_base/1_width_1_height_3_mm_depth/part
+  link_redirect: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/parts/oobb_oomlout_organizing_mount_computer_video_base_01_01_03
+  manufacturer: ''
+  name: Oobb Part Oomlout Organizing Mount Computer Video Base 1 Width 1 Height 3
+    mm Depth
+  name_short: Oomlout Organizing Mount Computer Video
+  part_number: ''
+  short_name: ''
+  size: oomlout_organizing_mount_computer_video_base
+  thickness: 3
+  thickness_mm: 3
+  type: part
+  width: 1
+  width_mm: 14
+type: github

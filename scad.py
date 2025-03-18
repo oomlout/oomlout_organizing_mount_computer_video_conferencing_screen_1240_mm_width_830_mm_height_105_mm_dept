@@ -114,8 +114,8 @@ def make_scad(**kwargs):
         
         part = copy.deepcopy(part_default)
         p3 = copy.deepcopy(kwargs)
-        p3["width"] = 3
-        p3["height"] = 3
+        p3["width"] = 1
+        p3["height"] = 1
         #p3["thickness"] = 6
         #p3["extra"] = ""
         part["kwargs"] = p3
@@ -123,7 +123,7 @@ def make_scad(**kwargs):
         part["name"] = nam
         if oomp_mode == "oobb":
             p3["oomp_size"] = nam
-        #parts.append(part)
+        parts.append(part)
 
 
     kwargs["parts"] = parts
@@ -144,7 +144,7 @@ def make_scad(**kwargs):
 
 def get_base(thing, **kwargs):
 
-    prepare_print = kwargs.get("prepare_print", False)
+    prepare_print = kwargs.get("prepare_print", True)
     width = kwargs.get("width", 1)
     height = kwargs.get("height", 1)
     depth = kwargs.get("thickness", 3)                    
@@ -152,28 +152,61 @@ def get_base(thing, **kwargs):
     pos = kwargs.get("pos", [0, 0, 0])
     extra = kwargs.get("extra", "")
     
-    #add plate
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "positive"
-    p3["shape"] = f"oobb_plate"    
-    p3["depth"] = depth
-    #p3["holes"] = True         uncomment to include default holes
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
+
+    #bottom cylinder
+    current_z = 0
+    bottom_cylinder_depth = 10
+    bottom_cylinder_radius = 62/2
+    if True:
+        #add plate
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "positive"
+        p3["shape"] = f"oobb_cylinder"    
+        p3["radius"] = bottom_cylinder_radius
+        dep = bottom_cylinder_depth
+        p3["depth"] = dep
+        
+        pos1 = copy.deepcopy(pos)  
+        pos1[2]  += dep/2 
+        p3["pos"] = pos1
+        current_z += dep
+        oobb_base.append_full(thing,**p3)
     
-    #add holes seperate
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "p"
-    p3["shape"] = f"oobb_holes"
-    p3["both_holes"] = True  
-    p3["depth"] = depth
-    p3["holes"] = "perimeter"
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
+    #middle cylinder    
+    middle_cylinder_depth = 85
+    middle_cylinder_radius_bottom = bottom_cylinder_radius
+    middle_cylinder_radius_top = 53/2
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "positive"
+        p3["shape"] = f"oobb_cylinder"    
+        p3["r1"] = middle_cylinder_radius_bottom
+        p3["r2"] = middle_cylinder_radius_top
+        dep = middle_cylinder_depth
+        p3["depth"] = dep        
+        pos1 = copy.deepcopy(pos)  
+        pos1[2]  += dep/2 + current_z
+        p3["pos"] = pos1
+        current_z += dep
+        oobb_base.append_full(thing,**p3)
+
+    #top cylinder
+    top_cylinder_depth = 15
+    top_cylinder_radius_bottom = middle_cylinder_radius_top
+    top_cylinder_radius_top = 40/2
+    if True:
+        p3 = copy.deepcopy(kwargs)
+        p3["type"] = "positive"
+        p3["shape"] = f"oobb_cylinder"    
+        p3["r1"] = top_cylinder_radius_bottom
+        p3["r2"] = top_cylinder_radius_top
+        dep = top_cylinder_depth
+        p3["depth"] = dep        
+        pos1 = copy.deepcopy(pos)  
+        pos1[2]  += dep/2 + current_z
+        p3["pos"] = pos1
+        current_z += dep
+        oobb_base.append_full(thing,**p3)
 
     if prepare_print:
         #put into a rotation object
@@ -187,7 +220,7 @@ def get_base(thing, **kwargs):
         return_value_2["rot"] = [180,0,0]
         return_value_2["objects"] = components_second
         
-        thing["components"].append(return_value_2)
+        #thing["components"].append(return_value_2)
 
     
         #add slice # top
@@ -195,11 +228,11 @@ def get_base(thing, **kwargs):
         p3["type"] = "n"
         p3["shape"] = f"oobb_slice"
         pos1 = copy.deepcopy(pos)
-        pos1[0] += -500/2
-        pos1[1] += 0
-        pos1[2] += -500/2        
+        pos1[0] += 8
+        pos1[1] += -500/2
+        pos1[2] += 0
         p3["pos"] = pos1
-        #p3["m"] = "#"
+        p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
     
 if __name__ == '__main__':
